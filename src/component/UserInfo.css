@@ -1,0 +1,46 @@
+.user-info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  input {
+    width: 100%;
+    padding: 12px 10px;
+    font-weight: 500;
+    border: 1px solid #bbb;
+    outline: none;
+    border-radius: 10px;
+  }
+  input:focus {
+    border: 1px solid black;
+  }
+}
+.user-info_container h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.shipping-address_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  --gap: 20px;
+  gap: var(--gap);
+}
+
+#firstname,
+#lastname {
+  width: calc(50% - calc(var(--gap) / 2));
+}
+.checkout-btn {
+  justify-self: flex-end;
+  width: 60%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.checkout-btn:hover {
+  background-color: #303030;
+}

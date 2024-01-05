@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  font-size: 62.5%;
+  --primary-background: #f3f3f3;
+
+  --primary-background: #eee;
+}
+body {
+  background-color: var(--primary-background);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}

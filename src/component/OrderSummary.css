@@ -1,0 +1,40 @@
+.order-summary_container {
+  --border-color: #dbdbdb;
+  margin: 0px 30px;
+  background-color: #ffffff;
+
+  border-radius: 4px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  margin-top: 30px;
+}
+.order-summary_container h3 {
+  font-size: 1.6rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.solo-bill {
+  display: grid;
+  grid-template-columns: 1fr 7ch;
+  gap: 6px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #3f3f3f;
+}
+.solo-bill span {
+  text-align: right;
+}
+.order-total {
+  border-top: 1px solid var(--border-color);
+  align-self: flex-end;
+}
+.order-total span {
+  font-weight: bold;
+}

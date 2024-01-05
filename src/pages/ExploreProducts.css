@@ -1,0 +1,13 @@
+.product-main {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+}
+.products-container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  place-items: center;
+  gap: 16px;
+  padding-right: 20px;
+}

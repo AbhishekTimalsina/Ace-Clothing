@@ -1,0 +1,11 @@
+.price-filter_wrapper {
+  position: absolute;
+  right: 20px;
+  top: -28px;
+  display: flex;
+  gap: 12px;
+}
+.price-filter_wrapper label {
+  font-size: 14px;
+  font-weight: 600;
+}
