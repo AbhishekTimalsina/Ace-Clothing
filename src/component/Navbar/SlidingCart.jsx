@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { CartContext } from "../context/CartProvider";
+import { CartContext } from "../../context/CartProvider";
 import { ShoppingCart, X } from "phosphor-react";
 import { Link } from "react-router-dom";
 import "./SlidingCart.css";
+import toast from "react-hot-toast";
 
 function SlidingCart({ toggleShowCart }) {
   const { cart, addProductQuantity, removeFromCart } = useContext(CartContext);
@@ -39,6 +40,7 @@ function CartMain({ cart, addProductQuantity, removeFromCart }) {
         product={product}
         addProductQuantity={addProductQuantity}
         removeFromCart={removeFromCart}
+        key={product.id}
       />
     );
   });
@@ -63,6 +65,7 @@ function CartProducts({ product, addProductQuantity, removeFromCart }) {
 
   function removeProduct() {
     removeFromCart(product.id);
+    toast.error("Removed from Cart ");
   }
 
   return (

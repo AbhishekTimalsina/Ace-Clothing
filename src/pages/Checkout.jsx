@@ -1,7 +1,7 @@
 import React from "react";
 import "./Checkout.css";
-import UserInfo from "../component/UserInfo";
-import OrderSummary from "../component/OrderSummary";
+import UserInfo from "../component/checkout/UserInfo";
+import OrderSummary from "../component/checkout/OrderSummary";
 
 function Checkout() {
   return (

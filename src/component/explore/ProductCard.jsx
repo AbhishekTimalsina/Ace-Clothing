@@ -1,16 +1,15 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../context/CartProvider";
-
+import { CartContext } from "../../context/CartProvider";
+import toast from "react-hot-toast";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
-  const [isAddedToCart, setIsAddedToCart] = useState(false);
   let { addToCart } = useContext(CartContext);
 
   function handleAddToCart() {
-    setIsAddedToCart(!isAddedToCart);
     addToCart(product);
+    toast.success("Added to Cart");
   }
 
   return (

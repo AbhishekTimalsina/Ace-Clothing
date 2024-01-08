@@ -31,7 +31,6 @@
   width: calc(50% - calc(var(--gap) / 2));
 }
 .checkout-btn {
-  justify-self: flex-end;
   width: 60%;
   padding: 10px;
   background-color: black;
@@ -40,6 +39,7 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s;
+  font-size: 1.4rem;
 }
 .checkout-btn:hover {
   background-color: #303030;

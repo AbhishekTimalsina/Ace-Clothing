@@ -1,5 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartProvider";
 import "./UserInfo.css";
+import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
 
 function UserInfo() {
   return (
@@ -20,6 +24,19 @@ function ContactInformation() {
 }
 
 function ShippingAddress() {
+  const { emptyCart, cart } = useContext(CartContext);
+  let navigate = useNavigate();
+
+  function checkoutHandler() {
+    emptyCart();
+    if (cart.length < 1) {
+      toast.error("Your shopping list is Emtpy");
+      return;
+    }
+    toast.success("Checked out");
+    navigate("/");
+  }
+
   return (
     <div className="shipping-address_container">
       <h3>Shipping Address</h3>
@@ -28,7 +45,9 @@ function ShippingAddress() {
         <input type="name" placeholder="Last name" id="lastname" />
         <input type="name" placeholder="Address" id="address" />
         <input type="name" placeholder="City" id="city" />
-        <button className="checkout-btn">Checkout</button>
+        <button className="checkout-btn" onClick={checkoutHandler}>
+          Checkout
+        </button>
       </div>
     </div>
   );

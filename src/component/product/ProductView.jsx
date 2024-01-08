@@ -1,13 +1,15 @@
 import { useContext } from "react";
-import { CartContext } from "../context/CartProvider";
+import { CartContext } from "../../context/CartProvider";
 
 import "./ProductView.css";
+import toast from "react-hot-toast";
 
 function ProductView({ productData }) {
   const { addToCart } = useContext(CartContext);
 
   function handleAddToCart() {
     addToCart(productData);
+    toast.success("Added to Cart");
   }
 
   return (

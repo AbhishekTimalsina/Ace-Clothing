@@ -38,11 +38,15 @@ function CartProvider({ children }) {
     setCart(filteredCart);
   }
 
+  function emptyCart() {
+    setCart([]);
+  }
   let contextValue = {
     cart,
     addToCart,
     removeFromCart,
     addProductQuantity,
+    emptyCart,
   };
 
   return (

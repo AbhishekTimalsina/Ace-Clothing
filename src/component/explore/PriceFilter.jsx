@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./PriceFilter.css";
 
 function PriceFilter({ priceFlter, handlePriceFilter }) {
@@ -6,7 +6,9 @@ function PriceFilter({ priceFlter, handlePriceFilter }) {
     <div className="price-filter_wrapper">
       <label htmlFor="price-filter">Items Sorted by:</label>
       <select id="price-filter" value={priceFlter} onChange={handlePriceFilter}>
-        <option value="default">----------------------</option>
+        <option value="default" disabled hidden>
+          Select an option
+        </option>
         <option value="high-to-low">(Price) Highest to lowest</option>
         <option value="low-to-high">(Price) Lowest to highest</option>
       </select>

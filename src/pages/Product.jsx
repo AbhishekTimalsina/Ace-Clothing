@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import fetchFromApi from "../utils/fetchFromApi";
-import ProductView from "../component/ProductView";
+import ProductView from "../component/product/ProductView";
 
 import "./Product.css";
 

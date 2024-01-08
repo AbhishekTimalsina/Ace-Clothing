@@ -50,3 +50,9 @@
   left: 0px;
   z-index: 999;
 }
+
+@media (max-width: 1050px) {
+  .nav-link_container {
+    gap: 36px;
+  }
+}

@@ -1,0 +1,25 @@
+.home-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.home-main > * {
+  width: 50%;
+}
+
+@media (max-width: 1050px) {
+  .home-main {
+    gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .home-main {
+    min-height: calc(90vh - 75px);
+    padding-top: 0px;
+  }
+  .home-main > * {
+    width: 80%;
+  }
+}

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { CartContext } from "../context/CartProvider";
+import { CartContext } from "../../context/CartProvider";
 import { Link, NavLink } from "react-router-dom";
 import { MagnifyingGlass, ShoppingCart } from "phosphor-react";
 import SlidingCart from "./SlidingCart";
@@ -37,6 +37,8 @@ function Navbar() {
             <CartButton toggleShowCart={toggleShowCart} />
           </li>
         </ul>
+        
+
       </nav>
       <SlidingCart toggleShowCart={toggleShowCart} />
       <CartSliderOverlay />

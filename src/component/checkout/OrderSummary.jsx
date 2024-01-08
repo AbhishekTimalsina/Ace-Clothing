@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { CartContext } from "../context/CartProvider";
+import { CartContext } from "../../context/CartProvider";
 import "./OrderSummary.css";
 
 function OrderSummary() {
   let { cart } = useContext(CartContext);
 
   let allSoloProducts = cart.map((product) => {
-    return <SoloBill product={product} />;
+    return <SoloBill product={product} key={product.id} />;
   });
 
   let totalPrice = cart.reduce((acc, cur) => {

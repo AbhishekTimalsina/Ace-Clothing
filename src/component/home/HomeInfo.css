@@ -1,0 +1,51 @@
+.info-txt {
+}
+.info-txt h2 {
+  font-size: clamp(3.4rem, 4vw + 1rem, 5.2rem);
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1;
+}
+.info-txt p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+.explore-clothing_btn {
+  margin-top: 26px;
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  a {
+    font-size: 1.6rem;
+    padding: 10px 14px;
+    display: inline-block;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 850px) {
+  .info-txt p {
+    font-size: 1.6rem;
+  }
+  .explore-clothing_btn {
+    margin-top: 18px;
+    a {
+      font-size: 1.4rem;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .home-info {
+    width: 90% !important;
+  }
+  .info-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .info-txt h2 {
+    font-size: clamp(3.8rem, 4vw + 1rem, 5.2rem);
+  }
+}

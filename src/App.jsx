@@ -16,6 +16,9 @@ import ExploreProduct from "./pages/ExploreProducts";
 import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 
+// react toast
+import { Toaster } from "react-hot-toast";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout />}>
@@ -32,6 +35,14 @@ function App() {
     <>
       <CartProvider>
         <RouterProvider router={router} />
+        <Toaster
+          toastOptions={{
+            style: {
+              padding: "16px",
+              fontSize: "1.6rem",
+            },
+          }}
+        />
       </CartProvider>
     </>
   );

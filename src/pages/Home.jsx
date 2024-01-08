@@ -1,5 +1,4 @@
-import Navbar from "../component/Navbar";
-import HomeMain from "../component/HomeMain";
+import HomeMain from "../component/home/HomeMain";
 import React from "react";
 
 function Home() {

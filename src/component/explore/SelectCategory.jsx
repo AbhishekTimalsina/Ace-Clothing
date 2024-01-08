@@ -12,7 +12,7 @@ function SelectCategory({ checkBoxState, handleCheckBox }) {
             id="category-men"
             name="men"
             checked={checkBoxState.men}
-            onClick={handleCheckBox}
+            onChange={handleCheckBox}
           />
           <label htmlFor="category-men">Men</label>
         </span>
@@ -22,7 +22,7 @@ function SelectCategory({ checkBoxState, handleCheckBox }) {
             id="category-women"
             name="women"
             checked={checkBoxState.women}
-            onClick={handleCheckBox}
+            onChange={handleCheckBox}
           />
           <label htmlFor="category-women">Women</label>
         </span>
