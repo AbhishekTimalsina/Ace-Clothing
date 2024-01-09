@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SelectCategory.css";
 
 function SelectCategory({ checkBoxState, handleCheckBox }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleCategoryClick() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className="select-category_container">
-      <h4>Category</h4>
-      <div>
+      <h4 onClick={handleCategoryClick}>Category</h4>
+      <div className={isOpen ? "open" : ""}>
         <span className="category-option">
           <input
             type="checkbox"

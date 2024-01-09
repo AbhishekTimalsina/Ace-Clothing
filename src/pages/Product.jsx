@@ -18,7 +18,7 @@ function Product() {
   }, [productId]);
 
   return (
-    <main className="product-main container">
+    <main className="product-view_main container">
       <ProductView productData={productData} />
     </main>
   );

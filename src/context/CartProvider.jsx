@@ -23,7 +23,10 @@ function CartProvider({ children }) {
   }
 
   function addProductQuantity(id, newQty) {
-    if (newQty < 1) return;
+    if (newQty < 0) {
+      removeFromCart(id);
+      return;
+    }
     let newCartValue = cart.map((product) => {
       if (product.id === id) {
         return { ...product, qty: newQty };

@@ -4,7 +4,7 @@ import "./PriceFilter.css";
 function PriceFilter({ priceFlter, handlePriceFilter }) {
   return (
     <div className="price-filter_wrapper">
-      <label htmlFor="price-filter">Items Sorted by:</label>
+      <label htmlFor="price-filter">Sort by:</label>
       <select id="price-filter" value={priceFlter} onChange={handlePriceFilter}>
         <option value="default" disabled hidden>
           Select an option

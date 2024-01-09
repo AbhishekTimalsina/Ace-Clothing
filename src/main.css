@@ -9,6 +9,7 @@
   --primary-background: #f3f3f3;
 
   --primary-background: #eee;
+  --nav-height: 60px;
 }
 body {
   background-color: var(--primary-background);

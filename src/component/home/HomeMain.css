@@ -16,7 +16,7 @@
 }
 @media (max-width: 800px) {
   .home-main {
-    min-height: calc(90vh - 75px);
+    min-height: calc(90vh - var(--nav-height));
     padding-top: 0px;
   }
   .home-main > * {

@@ -26,7 +26,7 @@ function ProductCard({ product }) {
           <button className="add-cart_btn" onClick={handleAddToCart}>
             Add to Cart
           </button>
-          <b className="product-price">${product?.price}</b>
+          <b className="product-card_price">${product?.price}</b>
         </span>
       </div>
     </div>

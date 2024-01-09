@@ -70,3 +70,38 @@
   scale: 1.01;
   background-color: #1a1a1a;
 }
+
+@media (max-width: 800px) {
+  .product-container {
+    --image-wrapper-width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-img_wrapper {
+    height: 50%;
+  }
+  .product-img_wrapper::after {
+    border-radius: 18px;
+  }
+  .product-img_wrapper img {
+    margin-top: 10%;
+  }
+  .product-info {
+    width: 100%;
+    padding-top: 0px;
+  }
+  .product-name {
+    font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+  }
+  .product-price {
+    font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem);
+  }
+  .product-description {
+    font-size: clamp(1.3rem, 1vw + 1rem, 2rem);
+  }
+  .product-cart_btn {
+    font-size: 1.5rem;
+    padding: 1.2rem 0px;
+    width: 12rem;
+  }
+}

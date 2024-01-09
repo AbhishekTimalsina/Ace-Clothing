@@ -28,11 +28,19 @@ function ShippingAddress() {
   let navigate = useNavigate();
 
   function checkoutHandler() {
-    emptyCart();
     if (cart.length < 1) {
       toast.error("Your shopping list is Emtpy");
       return;
     }
+    let totalPrice = cart.reduce((acc, cur) => {
+      return acc + cur.qty * cur.price;
+    }, 0);
+    if (totalPrice < 1) {
+      toast.error("Cannot process order value of zero(0).");
+      return;
+    }
+
+    emptyCart();
     toast.success("Checked out");
     navigate("/");
   }

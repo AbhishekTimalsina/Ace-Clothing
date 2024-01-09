@@ -10,6 +10,7 @@
   letter-spacing: 1px;
   border-bottom: 1px solid #c2c2c2;
   padding-bottom: 4px;
+  pointer-events: none;
 }
 .category-option {
   display: flex;
@@ -17,4 +18,42 @@
   gap: 10px;
   font-size: 1.4rem;
   padding-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .select-category_container {
+    position: absolute;
+    top: -28px;
+    left: 30px;
+    padding: 0px 10px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: fit-content;
+    border-radius: 6px;
+    cursor: pointer;
+    h4 {
+      border-bottom: none;
+      pointer-events: initial;
+    }
+    div {
+      display: none;
+      position: absolute;
+      top: 130%;
+      background: white;
+      padding: 15px;
+      gap: 10px;
+      flex-direction: column;
+      border: 1px solid #d3d0d0;
+    }
+    .category-option {
+      padding-top: 0px;
+    }
+    div.open {
+      display: flex;
+    }
+  }
+}
+@media (max-width: 550px) {
 }

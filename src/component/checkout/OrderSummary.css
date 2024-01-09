@@ -38,3 +38,9 @@
 .order-total span {
   font-weight: bold;
 }
+
+@media (max-width: 800px) {
+  .order-summary_container {
+    grid-row: 1;
+  }
+}

@@ -1,5 +1,12 @@
 .container.checkout-container {
   display: grid;
   grid-template-columns: 60fr 40fr;
-  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 800px) {
+  .container.checkout-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }

@@ -3,16 +3,32 @@
   top: 0px;
   z-index: 99;
   background-color: var(--primary-background);
+  height: var(--nav-height);
+  display: flex;
 }
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 1.8rem;
-  padding: 24px 0px;
+  /* padding: 24px 0px; */
 }
 .nav-link_container {
   display: flex;
   gap: 42px;
+}
+.nav-overlay {
+  /* display: none; */
+  min-height: calc(100vh - var(--nav-height));
+  width: 100%;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  background: black;
+  opacity: 0.2;
+
+  z-index: 99;
+  display: none;
 }
 .brand-name,
 .nav-link,
@@ -21,10 +37,11 @@
   cursor: pointer;
   position: relative;
 }
-.nav-link:last-child {
-  display: flex;
-  gap: 16px;
-  cursor: auto;
+
+.cart-icon {
+  position: relative;
+  display: block;
+  cursor: pointer;
 }
 .cart-counter {
   position: absolute;
@@ -38,6 +55,7 @@
   text-align: center;
   background-color: black;
   color: white;
+
   /* border: 1px solid black; */
 }
 .visible .cart-slide_overlay {
@@ -50,9 +68,79 @@
   left: 0px;
   z-index: 999;
 }
+.nav-secondary_btn {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  display: none;
+}
+.nav-secondary_btn span {
+  height: 2px;
+  width: 20px;
+  background-color: black;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+.nav-open .nav-secondary_btn span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-open .nav-secondary_btn span:nth-child(2) {
+  width: 0px;
+}
+
+.nav-open .nav-secondary_btn span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
 
 @media (max-width: 1050px) {
   .nav-link_container {
     gap: 36px;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    border-bottom: 1px solid #999;
+  }
+  .brand-name {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-link_container {
+    z-index: 999;
+    position: absolute;
+    top: var(--nav-height);
+    flex-direction: column;
+    left: 0;
+    transform: translateX(-150%);
+    transition: transform 0.3s;
+    gap: 0px;
+    min-height: calc(100vh - var(--nav-height));
+    background-color: #fff;
+    .nav-link {
+      padding: 0px 40px;
+      border-bottom: 1px solid var(--primary-background);
+    }
+    .nav-link a {
+      padding: 20px 0px;
+      display: block;
+    }
+  }
+  .nav-open .nav-link_container {
+    transform: translateX(0%);
+  }
+
+  .nav {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0px 30px;
+  }
+  .nav-secondary_btn {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav-open .nav-overlay {
+    display: block;
   }
 }

@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .products-container {
   display: grid;
@@ -10,4 +11,14 @@
   place-items: center;
   gap: 16px;
   padding-right: 20px;
+}
+@media (max-width: 800px) {
+  .product-main {
+    justify-content: center;
+  }
+  .products-container {
+    margin-top: 26px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
