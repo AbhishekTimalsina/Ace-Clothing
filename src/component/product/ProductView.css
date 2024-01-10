@@ -11,6 +11,8 @@
   position: relative;
   justify-content: center;
   height: 90%;
+  height: clamp(260px, 90%, 380px);
+
   border: none;
   width: var(--image-wrapper-width);
   overflow: hidden;
@@ -84,7 +86,7 @@
     border-radius: 18px;
   }
   .product-img_wrapper img {
-    margin-top: 10%;
+    margin-top: 5%;
   }
   .product-info {
     width: 100%;

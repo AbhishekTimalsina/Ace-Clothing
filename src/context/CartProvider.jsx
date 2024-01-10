@@ -27,6 +27,7 @@ function CartProvider({ children }) {
       removeFromCart(id);
       return;
     }
+    if (newQty > 20) return;
     let newCartValue = cart.map((product) => {
       if (product.id === id) {
         return { ...product, qty: newQty };

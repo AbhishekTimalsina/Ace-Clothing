@@ -33,6 +33,7 @@
     width: fit-content;
     border-radius: 6px;
     cursor: pointer;
+    border: 1px solid #999;
     h4 {
       border-bottom: none;
       pointer-events: initial;

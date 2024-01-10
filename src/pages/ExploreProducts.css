@@ -15,6 +15,7 @@
 @media (max-width: 800px) {
   .product-main {
     justify-content: center;
+    margin-top: 40px;
   }
   .products-container {
     margin-top: 26px;

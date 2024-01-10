@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartProvider";
 import { Link, NavLink } from "react-router-dom";
-import { MagnifyingGlass, ShoppingCart } from "phosphor-react";
+import { ShoppingCart } from "phosphor-react";
 import SlidingCart from "./SlidingCart";
 import "./Navbar.css";
 
