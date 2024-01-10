@@ -19,3 +19,5 @@ Ace Clothing is a project built using React js. Users can explore products, brow
 ### Npm
 
 - To install packages `npm install` after that to run the project `npm start`
+
+(The home page design is from [this dribble](https://dribbble.com/shots/20628601-Clothing-Website-Concept))
