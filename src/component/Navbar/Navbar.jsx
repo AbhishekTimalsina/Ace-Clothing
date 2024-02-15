@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { CartContext } from "../../context/CartProvider";
+import { useState } from "react";
+import { useCart } from "../../store/Store";
 import { Link, NavLink } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import SlidingCart from "./SlidingCart";
@@ -21,7 +21,7 @@ function Navbar() {
 }
 
 function CartButton({ toggleShowCart }) {
-  const { cart } = useContext(CartContext);
+  const cart = useCart();
 
   const totalCartQty = cart.reduce((totalQty, current) => {
     return totalQty + current.qty;

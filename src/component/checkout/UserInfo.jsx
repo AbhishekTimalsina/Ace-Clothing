@@ -1,6 +1,6 @@
 import React from "react";
-import { useContext } from "react";
-import { CartContext } from "../../context/CartProvider";
+import { useCartActions } from "../../store/Store";
+import { useCart } from "../../store/Store";
 import "./UserInfo.css";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
@@ -24,7 +24,9 @@ function ContactInformation() {
 }
 
 function ShippingAddress() {
-  const { emptyCart, cart } = useContext(CartContext);
+  const { emptyCart } = useCartActions();
+  const cart = useCart();
+
   let navigate = useNavigate();
 
   function checkoutHandler() {

@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { CartContext } from "../../context/CartProvider";
+import { useCart } from "../../store/Store";
+
 import "./OrderSummary.css";
 
 function OrderSummary() {
-  let { cart } = useContext(CartContext);
-
+  let cart = useCart();
   let allSoloProducts = cart.map((product) => {
     return <SoloBill product={product} key={product.id} />;
   });

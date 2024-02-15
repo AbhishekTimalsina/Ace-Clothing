@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartProvider";
 import toast from "react-hot-toast";
+import { useCartActions } from "../../store/Store";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
-  let { addToCart } = useContext(CartContext);
+  let { addToCart } = useCartActions();
 
   function handleAddToCart() {
     addToCart(product);

@@ -6,8 +6,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-// context provider
-import CartProvider from "./context/CartProvider";
 // layout
 import RootLayout from "./layout/RootLayout";
 // pages
@@ -33,17 +31,15 @@ const router = createBrowserRouter(
 function App() {
   return (
     <>
-      <CartProvider>
-        <RouterProvider router={router} />
-        <Toaster
-          toastOptions={{
-            style: {
-              padding: "16px",
-              fontSize: "1.6rem",
-            },
-          }}
-        />
-      </CartProvider>
+      <RouterProvider router={router} />
+      <Toaster
+        toastOptions={{
+          style: {
+            padding: "16px",
+            fontSize: "1.6rem",
+          },
+        }}
+      />
     </>
   );
 }

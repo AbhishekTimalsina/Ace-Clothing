@@ -1,12 +1,13 @@
-import { useContext } from "react";
-import { CartContext } from "../../context/CartProvider";
 import { ShoppingCart, X } from "phosphor-react";
 import { Link } from "react-router-dom";
-import "./SlidingCart.css";
+import { useCartActions } from "../../store/Store";
+import { useCart } from "../../store/Store";
 import toast from "react-hot-toast";
+import "./SlidingCart.css";
 
 function SlidingCart({ toggleShowCart }) {
-  const { cart, addProductQuantity, removeFromCart } = useContext(CartContext);
+  let cart = useCart();
+  let { addProductQuantity, removeFromCart } = useCartActions();
 
   return (
     <div className={`sliding-cart_container`}>
