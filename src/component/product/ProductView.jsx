@@ -7,7 +7,6 @@ function ProductView({ productData }) {
   const { addToCart } = useCartActions();
 
   function handleAddToCart() {
-    console.log("herum hai ta");
     addToCart(productData);
     toast.success("Added to Cart");
   }

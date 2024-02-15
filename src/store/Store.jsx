@@ -31,12 +31,12 @@ const useCartStore = create((set) => ({
       });
     },
     addProductQuantity(id, newQty) {
-      if (newQty < 0) {
-        removeFromCart(id);
-        return;
-      }
       if (newQty > 20) return;
       set((state) => {
+        if (newQty < 0) {
+          state.action.removeFromCart(id);
+          return {};
+        }
         let newCartValue = state.cart.map((product) => {
           if (product.id === id) {
             return { ...product, qty: newQty };
